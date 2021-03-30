@@ -1,0 +1,28 @@
+import './club-item.js';
+
+class ClubList extends HTMLElement {
+	// connectedCallback(){
+	// 	this.render();
+	// }
+
+	set clubs(clubs){
+		this._clubs = clubs;
+		this.render()
+	}
+
+	render(){
+		this.innerHTML = ``
+		this._clubs.forEach(club => {
+			const clubItemElement = document.createElement("club-item");
+			clubItemElement.club = club
+			this.appendChild(clubItemElement)
+		})
+	}
+
+	renderError(msg){
+		this.innerHTML = "";
+        this.innerHTML += `<h2 class="placeholder">${msg}</h2>`
+	}
+}
+
+customElements.define('club-list', ClubList);
