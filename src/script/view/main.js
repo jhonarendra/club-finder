@@ -11,7 +11,7 @@ const main = () => {
     const renderResult = results => {
         // console.log('call renderResult')
         clubListElement.innerHTML = "";
-        results.forEach((club) => {
+        results.forEach(club => {
             const {name, fanArt, description} = club
             // let name = club.name;
             // var fanArt = club.fanArt;
