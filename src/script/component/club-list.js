@@ -1,9 +1,13 @@
 import './club-item.js';
 
 class ClubList extends HTMLElement {
-	// connectedCallback(){
-	// 	this.render();
-	// }
+
+	constructor(){
+		super();
+		this.shadowDOM = this.attachShadow({
+			mode: 'open'
+		})
+	}
 
 	set clubs(clubs){
 		this._clubs = clubs;
@@ -11,17 +15,28 @@ class ClubList extends HTMLElement {
 	}
 
 	render(){
-		this.innerHTML = ``
+		this.shadowDOM.innerHTML = `
+			<style>
+				.placeholder {
+				    font-weight: lighter;
+				    color: rgba(0,0,0,0.5);
+				    -webkit-user-select: none;
+				    -moz-user-select: none;
+				    -ms-user-select: none;
+				    user-select: none;
+				}
+			</style>
+		`
 		this._clubs.forEach(club => {
 			const clubItemElement = document.createElement("club-item");
 			clubItemElement.club = club
-			this.appendChild(clubItemElement)
+			this.shadowDOM.appendChild(clubItemElement)
 		})
 	}
 
 	renderError(msg){
-		this.innerHTML = "";
-        this.innerHTML += `<h2 class="placeholder">${msg}</h2>`
+		this.shadowDOM.innerHTML = "";
+        this.shadowDOM.innerHTML += `<h2 class="placeholder">${msg}</h2>`
 	}
 }
 
