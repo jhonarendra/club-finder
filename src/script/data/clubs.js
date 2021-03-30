@@ -49,3 +49,4 @@ const clubs = [
         description: ""
     }
 ];
+export default clubs;
