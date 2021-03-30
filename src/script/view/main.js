@@ -17,6 +17,7 @@ const main = () => {
             const result = await DataSource.searchClub(searchElement.value);
             renderResult(result);
         } catch(message){
+            // console.log(message)
             fallbackResult(message)
         }
 

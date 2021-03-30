@@ -1,6 +1,6 @@
 class DataSource {
     static searchClub(keyword) {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, rejected) => {
             const filteredClubs = clubs.filter(club => club.name.toUpperCase().includes(keyword.toUpperCase()));
             if (filteredClubs.length) {
                 resolve(filteredClubs);
@@ -8,6 +8,5 @@ class DataSource {
                 rejected(keyword + " is not found");
             }
         })
-        
     };
 }
