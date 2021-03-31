@@ -17,7 +17,7 @@ class SearchBar extends HTMLElement {
 	}
 
 	get value(){
-		return this.shadowDOM.querySelector("#searchButtonElement").value;
+		return this.shadowDOM.querySelector("#searchElement").value;
 	}
 
 	render(){
