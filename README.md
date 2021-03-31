@@ -44,8 +44,8 @@ element.innerHTML += `
 
 ## ✒️ Web Component
 
-Dijelaskan juga cara membuat Web Component. Pertama saya pikir membuat custom html component harus menggunakan framework seperti VueJS atau React, ternyata bisa tanpa framework. Tetapi memang caranya jadi lebih panjang.
-Kita harus membuat class yg mewarisi HTMLElement
+Dijelaskan juga cara membuat Web Component. Pertama saya pikir membuat custom html component harus menggunakan framework seperti VueJS atau React, ternyata bisa tanpa framework. Tetapi memang caranya jadi lebih panjang. Meskipun begitu, sangat penting untuk mengetahui cara kerjanya secara native.
+Kita harus membuat class yg mewarisi `HTMLElement` sehingga elemen baru memiliki method method html pada umumnya.
 
 ```javascript
 class AppBar extends HTMLElement {
@@ -87,11 +87,11 @@ Menggunakan NPM seperti biasa. Yang penting dapat membedakan mana plugin yang di
 
 ## 🗳️ Webpack
 
-Banyak hal baru yang saya pelajari tentang webpack, karena biasanya dipakai di framework tetapi saya tidak tahu asal muasal penggunaannya. Karena webpack saya bisa menggunakan `npm run serve` yang akan menjalankan webpack dev server, atau menggunakan command `npm run build` untuk membundle seluruh javascript supaya menjadi lebih efisien dan tambahan plugin yang dapat menerjemahkan javscript ke bahasa yang didukung banyak browser.
+Banyak hal baru yang saya pelajari tentang webpack, karena biasanya dipakai di framework tetapi saya tidak tahu asal muasal penggunaannya 😂. Karena webpack, ternyata saya bisa menggunakan `npm run serve` yang akan menjalankan webpack dev server, atau menggunakan command `npm run build` untuk membundle seluruh javascript supaya menjadi lebih efisien dan tambahan plugin yang dapat menerjemahkan javscript ke bahasa yang didukung banyak browser.
 
 ## 🔗 Asynchronous JavaScript Request
 
-Permasalahan yang sering saya hadapi dengan Asynchronous JavaScript Request adalah satu fungsi yang berjalan terlebih dahulu, padahal memerlukan data dari api. 
+Permasalahan yang sering saya hadapi dengan _Asynchronous JavaScript Request_ adalah satu fungsi yang berjalan terlebih dahulu, padahal memerlukan data dari api. 
 
 ```javascript
 const onButtonSearchClicked = async() => {
@@ -105,8 +105,11 @@ const onButtonSearchClicked = async() => {
 ...
 ```
 
-Supaya menunggu respon dari api sebelum merender data, bisa dipakai `async` dan `await`.
+Supaya menunggu respon dari api sebelum merender data, bisa dipakai `async` dan `await` 👍.
 
 ## 🖼️ Screenshot
 
 ![](https://raw.githubusercontent.com/jhonarendra/club-finder/master/screenshot/1.gif)
+
+
+> Metode pengembangan front end web seperti ini sangat rapi dan terorganisir (hampir sama dengan framework js), sehingga memudahkan kita untuk mengembangkan aplikasi.
